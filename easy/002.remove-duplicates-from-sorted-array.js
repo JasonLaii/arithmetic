@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>002.002.remove-duplicates-from-sorted-array</title>
-  </head>
-  <body>
-    <script>
+
     /*
     Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 
@@ -95,6 +86,4 @@
 
       }
       console.log("数组长度为： "+removeDuplicates(test3))
-    </script>
-  </body>
-</html>
+

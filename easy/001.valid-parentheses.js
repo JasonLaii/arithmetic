@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>valid parentheses</title>
-</head>
 
-<body>
-  
-<script>
 /*
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -70,7 +59,4 @@ var isValid = function(s){
   return true;
 }
 
-console.log(isValid(test))
-</script>
-</body>
-</html>
+console.log(isValid(wrong))
