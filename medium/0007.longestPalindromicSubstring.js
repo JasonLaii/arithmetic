@@ -23,6 +23,8 @@ var longestPalindromicSubstring = function(str) {
   let current = "";
   //遍历str
   for (let i = 1; i < str.length; i++) {
+    
+    //从前往后扩展/延伸
     for (let j = 1; j < Math.ceil(str.length / 2); j++) {
       let pre = i - j;
       let next = i + j;
