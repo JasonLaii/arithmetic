@@ -54,7 +54,7 @@
  */
 var backtrack = function(list,tempList,arr,remain,start){
   if(remain < 0) return;
-  if(remain === 0 ) return list.push(tempList) 
+  if(remain === 0 ) return list.push([...tempList]) 
   for(let i=start;i<arr.length;i++){
     tempList.push(arr[i]);
     backtrack(list,tempList,arr,remain-arr[i],i);
