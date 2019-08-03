@@ -1,7 +1,7 @@
 before
 .vscode
 data-structor/binary-list.js
-medium/0034.permutations.js
 mark.md
+
 
 medium/0026.nextPermutation.js
