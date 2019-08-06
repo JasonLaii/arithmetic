@@ -31,7 +31,7 @@ function push(el){
   this.dataStore[this.top++] = el;
 }
 function pop(){
-  this.dataStore.pop();
+  // this.dataStore.pop();
   return this.dataStore[--this.top];
 }
 //返回栈顶元素
@@ -52,6 +52,6 @@ stack.push(-2);
 stack.push(0);
 stack.push(-3);
 console.log(stack.getMin());
-stack.pop();
+console.log(stack.pop())
 console.log(stack.peek());
 console.log(stack.getMin())
