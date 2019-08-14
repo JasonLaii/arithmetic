@@ -3,5 +3,6 @@ before
 data-structor/binary-list.js
 mark.md
 
-easy/0039.powerofFour.js
+medium/0041.rotateImage.js
+
 medium/0026.nextPermutation.js
