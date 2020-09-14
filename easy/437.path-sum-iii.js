@@ -3,7 +3,7 @@
  * @Date: 2020-09-09 23:48:02
  * @Github: https://github.com/JasonLaii
  * @Description:
- * @LastEditTime: 2020-09-13 11:23:34
+ * @LastEditTime: 2020-09-14 00:03:41
  */
 /*
 
@@ -93,10 +93,40 @@ CreateBinaryTree.prototype = {
     return head
   },
 }
+
+function pathSumII(root, sum) {
+  var helper = function (root, acc, target, hashmap) {
+    if (!root) return 0
+
+    let count = 0
+    acc += root.val
+    if (acc === target) count++
+    if (hashmap[acc - target] !== void 0) {
+      count += hashmap[acc - target]
+    }
+    if (hashmap[acc] === void 0) {
+      hashmap[acc] = 1
+    } else {
+      hashmap[acc] += 1
+    }
+    const res =
+      count +
+      helper(root.left, acc, target, hashmap) +
+      helper(root.right, acc, target, hashmap)
+
+    hashmap[acc] = hashmap[acc] - 1
+    return res
+  }
+  const hashmap = {}
+
+  return helper(root, 0, sum, hashmap)
+}
+
 ;(function () {
   let arr = [10, 5, -3, 3, 2, null, 11, 3, -2, null, 1]
   let tree = new CreateBinaryTree()
   let root = tree.createTree(arr)
-  let path = pathSum(root, 8)
-  console.log('path', path)
+  let path = pathSum(root, 8),
+    pathII = pathSumII(root, 8)
+  console.log('path', path, 'pathII', pathII)
 })()
