@@ -3,7 +3,7 @@
  * @Date: 2020-09-18 23:25:12
  * @Github: https://github.com/JasonLaii
  * @Description:
- * @LastEditTime: 2020-09-20 00:14:59
+ * @LastEditTime: 2020-09-20 12:29:26
  */
 function quickSort(arr, left = 0, right = arr.length - 1) {
   if (!arr.length) return
@@ -53,4 +53,6 @@ function quickSortII(arr) {
 ;(function () {
   console.log(quickSortII([9, 8, 7, 6, 5, 4, 3, 2, 1]))
   // console.log(quickSort([9, 8, 7, 6, 5, 4, 3, 2, 1]))
+  console.log(quickSort([9, 10, 11, 0, 4, 65, 56, 2, 34, 98]))
+  console.log(quickSortII([9, 10, 11, 0, 4, 65, 56, 2, 34, 98]))
 })()

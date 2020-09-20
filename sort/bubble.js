@@ -3,7 +3,7 @@
  * @Date: 2020-09-16 23:44:06
  * @Github: https://github.com/JasonLaii
  * @Description:
- * @LastEditTime: 2020-09-16 23:55:56
+ * @LastEditTime: 2020-09-20 12:29:42
  */
 function bubble(arr) {
   for (let i = 0; i < arr.length; i++) {
@@ -23,4 +23,5 @@ function bubble(arr) {
 ;(function () {
   console.log(bubble([9, 8, 7, 6, 5, 4, 3, 2, 1]))
   console.log(bubble([4, 3, 2, 1]))
+  console.log(bubble([9, 10, 11, 0, 4, 65, 56, 2, 34, 98]))
 })()
