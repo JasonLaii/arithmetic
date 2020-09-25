@@ -1,5 +1,12 @@
+/*
+ * @Author: Jason
+ * @Date: 2019-07-30 13:51:24
+ * @Github: https://github.com/JasonLaii
+ * @Description:
+ * @LastEditTime: 2020-09-24 23:45:51
+ */
 /**
- * 
+ *
  * Given a set of candidate(候选) numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 
  * The same repeated number may be chosen from candidates unlimited number of times.
@@ -39,33 +46,32 @@
 //     }
 //     if(sum += val === target) set.push(arr)
 
-
 //   }
 // }
 
-
 /**
- * 
- * @param {number[]} list 
- * @param {number[]} tempList 
- * @param {number[]} arr 
- * @param {number} remain 
- * @param {number} start 
+ *
+ * @param {number[]} list
+ * @param {number[]} tempList
+ * @param {number[]} arr
+ * @param {number} remain
+ * @param {number} start
  */
-var backtrack = function(list,tempList,arr,remain,start){
-  if(remain < 0) return;
-  if(remain === 0 ) return list.push([...tempList]) 
-  for(let i=start;i<arr.length;i++){
-    tempList.push(arr[i]);
-    backtrack(list,tempList,arr,remain-arr[i],i);
-    tempList.pop();
+var backtrack = function (list, tempList, arr, remain, start) {
+  if (remain < 0) return
+  if (remain === 0) return list.push([...tempList])
+  for (let i = start; i < arr.length; i++) {
+    tempList.push(arr[i])
+    backtrack(list, tempList, arr, remain - arr[i], i)
+    tempList.pop()
   }
 }
 
-var sumSet = function(arr,target){
-  const list = new Array();
-  backtrack(list,new Array(),arr,target,0);
-  return list;
+var sumSet = function (arr, target) {
+  const list = new Array()
+  backtrack(list, new Array(), arr, target, 0)
+  return list
 }
 
-console.log(sumSet([2,3,5],8))
+console.log(sumSet([2, 3, 5], 8))
+console.log(sumSet([1, 2, 5], 10))

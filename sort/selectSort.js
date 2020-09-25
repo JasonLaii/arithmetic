@@ -3,7 +3,7 @@
  * @Date: 2020-09-20 12:43:11
  * @Github: https://github.com/JasonLaii
  * @Description:
- * @LastEditTime: 2020-09-21 23:49:12
+ * @LastEditTime: 2020-09-25 23:26:11
  */
 function selectSort(arr = []) {
   if (!arr.length) return
@@ -19,6 +19,7 @@ function selectSort(arr = []) {
   }
   return res
 }
+
 ;(function () {
   // console.log(selectSort([9, 8, 7, 6, 5, 45, 4, 3, 2, 1]))
   console.log(selectSort([9, 10, 11, 0, 4, 65, 56, 2, 34, 98]))
